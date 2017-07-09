@@ -1,0 +1,106 @@
+ #chat1{
+	width: 500px;
+	height: 300px;
+	border: dashed pink 2px; 
+	border-radius: 10px;
+	display: inline-block;
+	margin: 30px 30px 15px 30px;
+	color: violet;
+	overflow: auto;
+
+}
+
+#chat2{
+	width: 500px;
+	height: 300px;
+	border: dashed blue 2px; 
+	border-radius: 10px;
+	display: inline-block;
+	margin: 30px 125px 15px;
+	color: blue;
+	overflow: auto;
+}
+
+#input1 {
+	height: 40px;
+	width: 300px; 
+	border: blue solid 1px;
+	margin-left: 76px;
+	border-radius: 5px;
+	font-size: 20px;
+	display: inline-block;
+}
+
+#input2 {
+	height: 40px;
+	width: 300px; 
+	border: pink 1px solid;
+	margin-left: 260px;
+	border-radius: 5px;
+	font-size: 20px;
+	display: inline-block;
+}
+
+#myBtn1, #myBtn2{
+	height: 34px;
+	width: 100px;
+	border-radius: 5px;
+	margin-left: 5px;
+	display: inline-block;
+	border: solid 1px violet;
+	text-align: center;
+	padding-top: 9px;
+	cursor: pointer;
+}
+
+p {
+	display: inline-block;
+	background-color: rgba(225,225,225,0.5);
+	border-radius: 5px;
+	padding: 2px 5px;
+}
+
+span {
+	font-size: 5px;
+	display: inline-block;
+}
+/* 设置每条消息呈现在框口里的位置，字号大小，颜色*/
+#chat1 > .ip1{
+	text-align: right;
+	font-size: 20px;
+}
+
+#chat1 > .ip2{
+	color: blue;
+	font-size: 20px;
+
+}
+
+
+#chat2 > .ip2{
+	text-align: right;
+	font-size: 20px;
+}
+
+#chat2 > .ip1{
+	color: violet;
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

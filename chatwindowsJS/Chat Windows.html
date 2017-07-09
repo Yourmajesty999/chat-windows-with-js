@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat Windows</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="chatwindows.css">
+	<script type="text/javascript" src="windows.js"></script>
+</head>
+<body>
+	<div class="Chat1" id="chat1"></div>
+	<div class="Chat2" id="chat2"></div>
+	<div>
+		<input type="text" id="input1" placeholder="Write your messages here..." class="left" onkeydown="sendOne(event)">
+		<div id="myBtn1" onclick="getMesOne()" >Click</div>
+		<input type="text" id="input2" placeholder="Write your messages here..." class="right" onkeydown="sendTwo(event)">
+		<div id="myBtn2" onclick="getMesTwo()"> Click </div>
+	</div>
+</body>
+</html>
