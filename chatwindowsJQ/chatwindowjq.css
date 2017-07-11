@@ -1,0 +1,94 @@
+.target1,.target2{
+	display: inline-block;
+	margin-left: 100px;
+}
+
+ #Chat1 
+        { 
+            width: 500px; 
+            height: 382px; 
+            overflow: scroll;
+            word-break: break-all; 
+            border: 2px solid;
+            margin-top: 65px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 20px;
+
+        }
+
+
+#Chat2 
+        { 
+            width: 500px; 
+            height: 382px; 
+            overflow: scroll;
+            word-break: break-all; 
+            border: 2px solid;
+            margin-top: 65px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 20px;
+
+            
+        }
+
+
+input{
+	width:350px; 
+	height:40px; 
+	font-size: 20px; 
+	margin-left: 41px;
+	margin-top:15px; 
+	border-color: rgba(8, 179, 8, 0.52);
+	display: inline-block;
+}
+
+#send1,#send2 {
+	width:100px;
+	height:30px;
+	padding-top: 10px;
+	border:pink 2px solid;
+	border-radius: 5px;
+	display: inline-block;
+	text-align: center;
+}
+
+.msg {
+	display: inline-block;
+}
+
+#Chat1 span{
+	font-size: 5px;
+	padding-left: 5px;
+}
+
+#Chat2 span{
+	font-size: 5px;
+	padding-left: 5px;
+}
+
+#Chat1>.msgContainer1{
+	color: pink;
+	text-align: right;
+}
+
+#Chat1>.msgContainer2{
+	color: skyblue;
+}
+
+#Chat2>.msgContainer1{
+	color: pink;
+	text-align: left;
+}
+
+#Chat2>.msgContainer2{
+	color: skyblue;
+	text-align: right;
+}
+
+ 
+         
+     
+
+	

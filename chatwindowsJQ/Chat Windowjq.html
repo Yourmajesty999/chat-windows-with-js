@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=UTF-8">
+    <title> Chat Window </title> 
+    <link rel="stylesheet" type="text/css" href="chatwindowjq.css">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script> 
+	    function messageOne(){
+//获取编辑框的消息
+			var temp = $('#input1').val()
+//判断获取消息成功就执行以下事件
+			if(temp){
+				var target1 = $("#Chat1")
+                var target2 = $("#Chat2")
+//动态添加盛放每条消息的盒子 时间
+				var template = '<div class="msgContainer1"><div class="msg">'+ 
+				temp +  '</div><span>' + getDateTime() + '</span></div>'
+//将消息获取到显示窗口
+				target1.append(template)
+                target2.append(template)
+//消息发送之后清空编辑框
+				$('#input1').val('')
+//显示窗口内的消息随着消息增加向上移动，保持最新一条消息可以被看见
+                Chat1.scrollTop += 382
+			}
+		}
+
+        function messageTwo(){
+            var temp = $('#input2').val()
+            if(temp){
+                var target1 = $("#Chat1")
+                var target2 = $("#Chat2")
+                var template = '<div class="msgContainer2"><div class="msg">'+ 
+                temp +  '</div><span>' + getDateTime() + '</span></div>'
+                target1.append(template)
+                target2.append(template)
+                $('#input2').val('')
+                Chat2.scrollTop += 382
+            }
+        }	
+//获取时间函数
+		function getDateTime(){
+			var d = new Date()
+			return d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() 
+			}
+//键盘响应事件
+		function send(event){
+//判断键盘为回车键 编辑框消息不为空 则执行以下事件（在编辑框1就响应第一个函数，在编辑框2就响应第二个函数）
+			if(event.keyCode == 13 && $('#input1').val() || event.keyCode == 13 && $('#input2').val()){
+				messageOne()
+                messageTwo()
+			}
+		}
+
+    </script>
+</head>
+  
+<body>
+<!-- 让窗口 输入框 按钮为同一容器方便安排位置-->
+    <div class="target1">
+        <div id="Chat1"></div>
+        <div>
+        <!-- 光标在对应编辑框时候响应键盘-->
+            <input type="text" id="input1" placeholder="Write your message here..."  onkeydown="send(event)"> 
+            <!-- 按钮1响应函数messageOne（）-->
+    	    <div id="send1"  onclick="messageOne()">Send</div>
+        </div>
+    </div>
+        <!-- chat2 -->
+    <div class="target2">
+        <div id="Chat2"></div>
+        <div>
+            <input type="text" id="input2" placeholder="Write your message here..."  onkeydown="send(event)"> 
+            <div id="send2" onclick="messageTwo()">Send</div>
+        </div>
+    </div>
+</body>
+</html>
